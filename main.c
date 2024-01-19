@@ -2,12 +2,20 @@
 #include "NumClass.h"
 
 int main(){
-    int a=isStrong(145);
-    int b=isStrong(146);
-    int c=isStrong(1);
+    int a=0;
+    int b=0;
+    int c=0;
+    int d=0;
+    for (int i =99;i<122;i++){
+        a=isStrong(i);
+        b=isPrime(i);
 
-    printf("145 is strong: %d\n",a);
-    printf("146 is strong: %d\n",b);
-    printf("1 is strong: %d\n",c);
-
+        c=isAmstrong(i);
+        d=isPalindrome(i);
+        printf("%d is strong: %d\n",i,a);
+        printf("%d is prime: %d\n",i,b);
+        printf("%d is Amstrong: %d\n",i,c);
+        printf("%d is Palindrome: %d\n",i,d);
+        printf("\n");
+    }
 }
