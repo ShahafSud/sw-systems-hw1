@@ -6,10 +6,9 @@ int main(){
     int b=0;
     int c=0;
     int d=0;
-    for (int i =99;i<122;i++){
+    for (int i =400;i<450;i++){
         a=isStrong(i);
         b=isPrime(i);
-
         c=isAmstrong(i);
         d=isPalindrome(i);
         printf("%d is strong: %d\n",i,a);

@@ -1,7 +1,8 @@
 CC=gcc
 AR=ar
 OBJECT_MAIN=main.o
-OBJECT_LIB=basicClassification.o advancedClassificationLoop.o advancedClasificationRecursion.o
+OBJECT_LIB_REC=basicClassification.o advancedClasificationRecursion.o
+OBJECT_LIB_LOOP=basicClassification.o advancedClassificationLoop.o
 FLAGS= -Wall -g
 
 
@@ -15,14 +16,14 @@ maindrec: $(OBJECT_MAIN)
 	$(CC) $(FLAGS) -o maindrec $(OBJECT_MAIN) ./libclassrec.so
 
 
-libclassloops.a: $(OBJECT_LIB)
-	$(AR) -rcs libclassloops.a $(OBJECT_LIB)
-libclassrec.a: $(OBJECT_LIB)
-	$(AR) -rcs libclassrec.a $(OBJECT_LIB)
-libclassloops.so: $(OBJECT_LIB)
-	$(CC) -shared -o libclassloops.so $(OBJECT_LIB)
-libclassrec.so: $(OBJECT_LIB)
-	$(CC) -shared -o libclassrec.so $(OBJECT_LIB)
+libclassloops.a: $(OBJECT_LIB_LOOP)
+	$(AR) -rcs libclassloops.a $(OBJECT_LIB_LOOP)
+libclassrec.a: $(OBJECT_LIB_REC)
+	$(AR) -rcs libclassrec.a $(OBJECT_LIB_REC)
+libclassloops.so: $(OBJECT_LIB_LOOP)
+	$(CC) -shared -o libclassloops.so $(OBJECT_LIB_LOOP)
+libclassrec.so: $(OBJECT_LIB_REC)
+	$(CC) -shared -o libclassrec.so $(OBJECT_LIB_REC)
 
 main.o: main.c NumClass.h
 	$(CC) $(FLAGS) -c main.c
