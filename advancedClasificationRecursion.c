@@ -1,5 +1,6 @@
 #include "NumClass.h"
-
+#define FALSE 0
+#define TRUE 1
 int sum_powers(int n,int n_digits,int sum){
     if(n==0){
         return sum;
@@ -29,13 +30,13 @@ int isAmstrong(int n){
     }
     int sumP=sum_powers(n,n_digits,0);
     if (n==sumP){
-        return 1;
+        return TRUE;
     }
-    return 0;
+    return FALSE;
 }
 int isPalindrome(int n){
     if(n/10==0){
-        return 1;
+        return TRUE;
     }
     int D1=n%10;//digit 1
     //find lase digit(L_D)
@@ -47,7 +48,7 @@ int isPalindrome(int n){
     }
     //check last and first digits
     if (L_D!=D1){
-        return 0;
+        return FALSE;
     }
     //get n without the last and first digits
     int n_no_firstAndLast=(n-(L_D*LD_multiplayre))/10;

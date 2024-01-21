@@ -1,12 +1,13 @@
 #include "NumClass.h"
-
+#define FALSE 0
+#define TRUE 1
 int isAmstrong(int n){
     int x = n;
     if (x<0){
-        return 0;
+        return FALSE;
     }
     if (x<10){//all 0to9 are Amstrong
-        return 1;
+        return TRUE;
     }
     int n_digits=0;
     //find the number of digits n_digits
@@ -27,14 +28,14 @@ int isAmstrong(int n){
         sum=sum+powered;
     }
     if(n==sum){
-        return 1;
+        return TRUE;
     }
-    return 0;
+    return FALSE;
 }
 int isPalindrome(int n){
     int x=n;
     if (x<0){
-        return 0;
+        return FALSE;
     }
     int n_digits=0;
     //find the number of digits n_digits
@@ -55,9 +56,9 @@ int isPalindrome(int n){
     index=0;
     while(index<n_digits-index-1){
         if(all_digits[index]!=all_digits[n_digits-1-index]){
-            return 0;
+            return FALSE;
         }
         index++;
     }
-    return 1;
+    return TRUE;
 }

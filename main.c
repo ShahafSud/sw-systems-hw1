@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include "NumClass.h"
-
+#define FALSE 0
+#define TRUE 1
 int main(){
-    int a=0;
-    int b=0;
-    int c=0;
-    int d=0;
+    int a=FALSE;
+    int b=FALSE;
+    int c=FALSE;
+    int d=FALSE;
     for (int i =400;i<450;i++){
         a=isStrong(i);
         b=isPrime(i);
