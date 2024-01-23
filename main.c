@@ -34,7 +34,7 @@ int main(){
         }
     }
     printf("\n");
-    printf("The Palimdromes numbers are: " );
+    printf("The Palindromes numbers are: " );
 
     for (int i =min;i<max+1;i++){
         condition=isPalindrome(i);
@@ -61,4 +61,5 @@ int main(){
             printf("%d ",i);
         }
     }
+        printf("\n");
 }

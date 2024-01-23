@@ -24,7 +24,7 @@ int isStrong(int n){
     return FALSE;
 }
 int isPrime(int n){
-    if (n <= 1) return FALSE;// if 1, 0 or negative return 0
+    if (n < 1) return FALSE;// if 1, 0 or negative return 0
     if (n <= 3) return TRUE;// if 2 or 3 return 1
     if (n % 2 == 0 || n % 3 == 0) return FALSE;
     // implamenting the euclidian method

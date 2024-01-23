@@ -52,6 +52,12 @@ int isPalindrome(int n){
     }
     //get n without the last and first digits
     int n_no_firstAndLast=(n-(L_D*LD_multiplayre))/10;
+    if(n_no_firstAndLast==0){
+        return TRUE;
+    }
+    if((n/1000>0) & (n_no_firstAndLast/10==0)){
+        return FALSE;
+    }
     int isP=isPalindrome(n_no_firstAndLast);
     return isP;
 }
