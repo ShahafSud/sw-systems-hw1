@@ -26,29 +26,15 @@ int main(){
         min=num2; 
     }
     //print results
-    for (int i =min;i<max+1;i++){
-        condition=isPrime(i);
-        if(condition==1){
-            printf("%d ",i);
-        }
-    }
-    printf("\n\n");
-
+    printf("The Armstrong numbers are: " );
     for (int i =min;i<max+1;i++){
         condition=isAmstrong(i);
         if(condition==1){
             printf("%d ",i);
         }
     }
-    printf("\n\n");
-
-    for (int i =min;i<max+1;i++){
-        condition=isStrong(i);
-        if(condition==1){
-            printf("%d ",i);
-        }
-    }
-    printf("\n\n");
+    printf("\n");
+    printf("The Palimdromes numbers are: " );
 
     for (int i =min;i<max+1;i++){
         condition=isPalindrome(i);
@@ -57,5 +43,22 @@ int main(){
         }
     }
     printf("\n");
+    printf("The Prime numbers are: " );
 
+    for (int i =min;i<max+1;i++){
+        condition=isPrime(i);
+        if(condition==1){
+            printf("%d ",i);
+        }
+    }
+
+    printf("\n");
+    printf("The Strong numbers are: " );
+
+    for (int i =min;i<max+1;i++){
+        condition=isStrong(i);
+        if(condition==1){
+            printf("%d ",i);
+        }
+    }
 }
