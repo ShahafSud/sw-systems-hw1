@@ -34,7 +34,7 @@ int main(){
         }
     }
     printf("\n");
-    printf("The Palindromes numbers are:" );
+    printf("The Palindromes are:" );
 
     for (int i =min;i<max+1;i++){
         condition=isPalindrome(i);
