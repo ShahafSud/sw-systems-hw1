@@ -55,8 +55,9 @@ int isPalindrome(int n){
     if(n_no_firstAndLast==0){
         return TRUE;
     }
-    if((n/1000>0) & (n_no_firstAndLast/10==0)){
-        return FALSE;
+    //zeros, elimination
+    if(n_no_firstAndLast*100/LD_multiplayre==0){
+        n_no_firstAndLast=n_no_firstAndLast+(LD_multiplayre/100)+1;
     }
     int isP=isPalindrome(n_no_firstAndLast);
     return isP;
