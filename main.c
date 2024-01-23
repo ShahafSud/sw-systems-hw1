@@ -26,40 +26,39 @@ int main(){
         min=num2; 
     }
     //print results
-    printf("The Armstrong numbers are: " );
+    printf("The Armstrong numbers are:" );
     for (int i =min;i<max+1;i++){
         condition=isAmstrong(i);
         if(condition==1){
-            printf("%d ",i);
+            printf(" %d",i);
         }
     }
     printf("\n");
-    printf("The Palindromes numbers are: " );
+    printf("The Palindromes numbers are:" );
 
     for (int i =min;i<max+1;i++){
         condition=isPalindrome(i);
         if(condition==1){
-            printf("%d ",i);
+            printf(" %d",i);
         }
     }
     printf("\n");
-    printf("The Prime numbers are: " );
+    printf("The Prime numbers are:" );
 
     for (int i =min;i<max+1;i++){
         condition=isPrime(i);
         if(condition==1){
-            printf("%d ",i);
+            printf(" %d",i);
         }
     }
 
     printf("\n");
-    printf("The Strong numbers are: " );
+    printf("The Strong numbers are:" );
 
     for (int i =min;i<max+1;i++){
         condition=isStrong(i);
         if(condition==1){
-            printf("%d ",i);
+            printf(" %d",i);
         }
     }
-        printf("\n");
 }
